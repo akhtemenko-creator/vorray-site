@@ -3,111 +3,110 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#0f1114" />
 <title>VORRAY·GROUP — System Node Console</title>
 <meta name="description" content="VORRAY·GROUP — Infrastructure console. Balancing. Aggregation. Stability." />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0f1114;
     --panel:#161a1f;
+    --line:#283531;
+    --accent:#9aa6b2;
     --text:#e6e6e6;
     --muted:#9aa6b2;
-    --accent:#00d4c6;
-    --line:#32383f;
   }
-  *{box-sizing:border-box}
-  html,body{height:100%}
+  html,body{
+    height:100%;
+  }
+  *{box-sizing:border-box;}
   body{
     margin:0;
     color:var(--text);
-    background:
-      radial-gradient(1100px 820px at 68% 18%, #141820 0%, var(--bg) 60%) fixed var(--bg);
-    font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background: radial-gradient(1200px 800px at 70% -20%, #141820 0%, var(--bg) 60%) fixed var(--bg);
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     letter-spacing:.2px;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    user-select:none;
   }
-
   .wrap{
     min-height:100%;
-    display:grid;
-    place-items:center;
-    padding:24px 14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
   }
-  .console{
-    width:min(92ch, 96vw);
-    background:
-      linear-gradient(180deg, rgba(255,255,255,.02), transparent 42%) ,
-      var(--panel);
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 40%) , var(--panel);
     border:1px solid var(--line);
     border-radius:10px;
-    box-shadow:0 22px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
-    padding:22px 18px 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+    padding:28px 26px;
+    max-width: calc( 73ch + 56px );
   }
-
-  .top{
-    margin:0 0 8px 0;
-    line-height:1.18;
-    font-size:clamp(12px, 1.8vw, 16px);
-    white-space:pre;
+  .block{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:12px 10px;
+    margin-top:14px;
   }
-
-  pre.block{
+  pre{
     margin:0;
-    line-height:1.18;
-    font-size:clamp(12px, 1.85vw, 16.5px);
     white-space:pre;
-    tab-size:2;
+    font-size:16px;
+    line-height:1.2;
+    font-variant-ligatures: none;
   }
-
-  .accent{ color:var(--accent) }
-  .muted{ color:var(--muted) }
-
+  .header pre{
+    color:var(--text);
+  }
   .cursor{
-    display:inline-block; width:1ch; text-align:center; opacity:1;
+    display:inline-block;
+    width:0.6ch;
+    background:var(--text);
+    margin-left:2px;
+    animation: blink 1s steps(1, end) infinite;
   }
-  @media (hover:hover) and (pointer:fine){
-    .cursor{ animation:blink 1s steps(1,end) infinite }
-    @media (prefers-reduced-motion:reduce){ .cursor{animation:none} }
+  @keyframes blink{
+    0%,49% { opacity:1; }
+    50%,100% { opacity:0; }
   }
-  @keyframes blink{ 0%,49%{opacity:1} 50%,100%{opacity:.15} }
-
-  .foot{
-    margin:10px 0 0;
+  .meta{
+    margin-top:14px;
     color:var(--muted);
-    font-size:clamp(11.5px, 1.55vw, 14px);
-    white-space:pre;
+    font-size:14px;
   }
-
-  a, a:visited{ color:var(--accent); text-decoration:none }
-  a:hover{ text-decoration:underline }
+  .quote{
+    margin-top:14px;
+    color:var(--text);
+    font-size:16px;
+  }
+  /* Mobile tuning */
+  @media (max-width: 640px){
+    .card{ padding:20px 14px; }
+    pre{ font-size:14px; line-height:1.18; }
+    .cursor{ display:none; }
+  }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="console">
-
-      <pre class="top">┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  VORRAY·GROUP                                                  [ <span class="muted">SYSTEM NODE:</span> <span class="accent">ONLINE</span> ]   <span class="cursor">█</span> │
-└──────────────────────────────────────────────────────────────────────────────────────────────┘</pre>
-
-      <pre class="block">┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  VORRAY·GROUP                                                                                │
-│  ──────────────────────────────────────────────────────────────────────────────────────────  │
-│                                                                                              │
-│  &gt; Status .......................... <span class="accent">ACTIVE</span>                                                        │
-│  &gt; Comms Port ...................... VORRAY·CONNECT                                           │
-│  &gt; Contact Endpoint ................ <a href="mailto:connect@vorray.group">connect@vorray.group</a>                                           │
-│  &gt; Network ......................... Pan-European Grid                                        │
-│  &gt; Pending Module .................. VORRAY·BDR [ <span class="muted">QUEUED</span> ]                                          │
-│                                                                                              │
-│  “Balancing. Aggregation. Stability.”                                                        │
-└──────────────────────────────────────────────────────────────────────────────────────────────┘</pre>
-
-      <pre class="foot">© VORRAY OÜ · EU Grid Zone</pre>
-
+    <div class="card">
+      <div class="header block">
+        <pre>┌───────────────────────────────────────────────────────────────────────┐
+│ VORRAY·GROUP                               [ SYSTEM NODE: ONLINE ]    │
+└───────────────────────────────────────────────────────────────────────┘<span class="cursor"></span></pre>
+      </div>
+      <div class="block">
+        <pre>┌───────────────────────────────────────────────────────────────────────┐
+│ > Status .......................... ACTIVE                            │
+│ > Comms Port ..................... VORRAY·CONNECT                     │
+│ > Contact Endpoint ............... connect@vorray.group               │
+│ > Network ........................ Pan-European Grid                  │
+│ > Pending Module ................. VORRAY·BDR [ QUEUED ]              │
+└───────────────────────────────────────────────────────────────────────┘</pre>
+      </div>
+      <div class="quote">“Balancing. Aggregation. Stability.”</div>
+      <div class="meta">© VORRAY OÜ · EU Grid Zone</div>
     </div>
   </div>
 </body>
