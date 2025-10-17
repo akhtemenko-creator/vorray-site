@@ -132,46 +132,42 @@
   <style id="mobile-tweaks">
 @media (max-width: 560px){
 
-  /* Плотнее шрифты и отступы */
-  :root{
-    --ui-font: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-  body{ font-family: var(--ui-font); }
-  .hdr   { font-size: 15px; }
-  .badge { font-size: 13px; }
-  .console{ padding: 10px; }
-  .card   { padding: 12px; border-radius: 10px; }
+  .console{ padding: 14px; }
+  .card   { padding: 14px; border-radius: 12px; }
 
-  /* В одну строку: ключ | доты | значение */
   .row{
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "left leader right";
-    column-gap: 8px;
-    align-items: baseline;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right";
+    row-gap: 6px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
   }
-  .left  { grid-area: left;  white-space: nowrap; }
-  .right { grid-area: right; white-space: nowrap; text-align: right; }
+  .row:last-child{ border-bottom: 0; }
 
-  .leader{
-    grid-area: leader;
-    position: relative;
-    height: 1px;
+  .left{
+    grid-area: left;
+    font-size: 13px;
+    letter-spacing: .02em;
+    opacity: .8;
+    text-transform: none;
   }
-  .leader::before{
-    content: "";
-    display: block;
-    height: 1px;
-    background-image:
-      radial-gradient(circle at 1px 0.5px, rgba(255,255,255,.22) 1px, transparent 1.2px);
-    background-size: 6px 2px;
-    background-repeat: repeat-x;
-    background-position: left center;
-    opacity: .9;
+  .right{
+    grid-area: right;
+    font-size: 18px;
+    justify-self: end;
+    text-align: right;
+    white-space: normal;
   }
 
-  .quote { margin: 12px 6px 6px; font-size: 13px; line-height: 1.3; }
-  .footer{ padding: 8px 10px 14px; font-size: 11.5px; }
+  /* Заголовок/бэйдж нормальные */
+  .hdr  { font-size: 16px; }
+  .badge{ font-size: 14px; }
+
+  .quote { margin: 16px 6px 6px; font-size: 14px; line-height: 1.4; }
+  .footer{ padding: 10px 12px 16px; font-size: 12px; }
 }
 </style>
 </head>
