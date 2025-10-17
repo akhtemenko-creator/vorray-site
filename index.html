@@ -1,106 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>VORRAY·GROUP — System Node Console</title>
-<meta name="description" content="VORRAY·GROUP — Infrastructure console. Balancing. Aggregation. Stability." />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0f1114;
-    --panel:#1b1f24;
-    --text:#e6e6e6;
-    --muted:#9aa6b2;
-    --accent:#00b3ff;
-    --line:#283331;
-    --danger:#ff4d4d;
-  }
-  html,body{height:100%}
-  body{
-    margin:0;
-    background: radial-gradient(1200px 800px at 70% -20%, #141820 0%, var(--bg) 60%) fixed var(--bg);
-    color:var(--text);
-    font:16px/1.55 "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    letter-spacing:.2px;
-  }
-  .wrap{
-    min-height:100%;
-    display:grid;
-    place-items:center;
-    padding:10vh 4vw;
-  }
-  .console{
-    width:min(920px, 92vw);
-    background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 40%);
-    border:1px solid var(--line);
-    border-radius:10px;
-    box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
-    position:relative;
-  }
-  .hdr{
-    display:flex; align-items:center; justify-content:space-between;
-    gap:16px;
-    padding:18px 22px 14px;
-    border-bottom:1px solid var(--line);
-    text-transform:uppercase; letter-spacing:.8px; font-weight:600; color:var(--muted);
-  }
-  .hdr .brand{color:var(--text)}
-  .hdr .node{color:var(--muted)}
-  .hdr .blink{display:inline-block; width:.7ch; text-align:center}
-  /* blink only on desktop/pointer=mouse to avoid iOS artefacts */
-  @media (hover:hover) and (pointer:fine){
-    .hdr .blink{animation:blink 1.1s steps(1,end) infinite}
-    @keyframes blink{50%{opacity:.2}}
-  }
-
-  .panel{
-    margin:16px 14px 0;
-    padding:14px 18px;
-    border:2px solid var(--text);
-  }
-  /* inner table made from two columns with dots fill */
-  .row{display:flex; white-space:nowrap}
-  .lbl{min-width:17ch}
-  .dots{
-    flex:1 1 auto; overflow:hidden;
-    padding:0 .5ch;
-    mask:linear-gradient(90deg,#000 92%, transparent);
-  }
-  .dots::before{
-    content:"................................................................................................................";
-    letter-spacing:.2ch;
-    color:var(--muted);
-  }
-  .val{min-width:max-content}
-  a.mail{color:#39c7c7; text-decoration:none; border-bottom:1px dotted rgba(57,199,199,.35)}
-  a.mail:hover{color:#53d9d9}
-
-  .quote{margin:16px 22px 0; color:var(--muted)}
-  .foot{margin:6px 22px 22px; color:var(--muted); font-size:.92rem}
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="console">
-
-    <div class="hdr">
-      <div class="brand">VORRAY·GROUP</div>
-      <div class="node">[ SYSTEM NODE: <span style="color:var(--accent)">ONLINE</span> ] <span class="blink">█</span></div>
-    </div>
-
-    <div class="panel" role="group" aria-label="Console panel">
-      <div class="row"><div class="lbl">&gt; Status</div><div class="dots"></div><div class="val">ACTIVE</div></div>
-      <div class="row"><div class="lbl">&gt; Comms Port</div><div class="dots"></div><div class="val">VORRAY·CONNECT</div></div>
-      <div class="row"><div class="lbl">&gt; Contact Endpoint</div><div class="dots"></div><div class="val"><a class="mail" href="mailto:connect@vorray.group">connect@vorray.group</a></div></div>
-      <div class="row"><div class="lbl">&gt; Network</div><div class="dots"></div><div class="val">Pan‑European Grid</div></div>
-      <div class="row"><div class="lbl">&gt; Pending Module</div><div class="dots"></div><div class="val">VORRAY·BDR  [ QUEUED ]</div></div>
-    </div>
-
-    <div class="quote">“Balancing. Aggregation. Stability.”</div>
-    <div class="foot">© VORRAY OÜ · EU Grid Zone</div>
-
-  </div>
-</div>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;VORRAY·GROUP — System Node Console&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="VORRAY·GROUP — Infrastructure console. Balancing. Aggregation. Stability." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Console typeface --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0f1114;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--panel:#161a1f;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text:#e6ecf2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#9aa6b2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#00d4c6; /* teal energy */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--line:#232831;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--danger:#ff4d4d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html,body{height:100%}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(1200px 800px at 70% -20%, #141820 0%, var(--bg) 60%) fixed var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>place-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:32px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.console{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:min(920px, 92vw);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent 40%) , var(--panel);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:28px 26px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hdr{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:center; justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:600; color:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hdr .title{display:flex;gap:10px;align-items:center;white-space:nowrap}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hdr .title .dot{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:10px;height:10px;border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 0 14px var(--accent), 0 0 30px rgba(0,212,198,.35);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hdr .state{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;gap:10px;white-space:nowrap</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.state .cursor{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-block; width:10px; height:18px; background:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>filter:drop-shadow(0 0 6px var(--accent));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation:blink 1.1s steps(2, jump-none) infinite;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>vertical-align:-3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.rule{border-top:1px solid var(--line); margin:12px 0 18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:baseline;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space:pre;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; transform:translateY(6px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation:reveal .6s ease forwards;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.label{color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dots{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex:1 1 auto; border-bottom:1px dotted #2b323c; transform:translateY(-3px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:.35; margin:0 6px 0 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.value{color:var(--text)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.accent{color:var(--accent)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.foot{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:20px; padding-top:14px; color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;justify-content:space-between;gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hb{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;gap:10px;white-space:nowrap</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hb .pulse{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:12px;height:12px;border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 0 10px var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation:pulse 1.6s ease-in-out infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.foot .time{opacity:.8}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* staged reveal timings */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line:nth-of-type(1){animation-delay:.1s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line:nth-of-type(2){animation-delay:.25s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line:nth-of-type(3){animation-delay:.4s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line:nth-of-type(4){animation-delay:.55s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line:nth-of-type(5){animation-delay:.7s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.line:nth-of-type(6){animation-delay:.85s}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes reveal{to{opacity:1; transform:translateY(0)}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes pulse{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0%{transform:scale(1); box-shadow:0 0 8px rgba(0,212,198,.9)}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>50%{transform:scale(1.25); box-shadow:0 0 18px rgba(0,212,198,1)}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100%{transform:scale(1); box-shadow:0 0 8px rgba(0,212,198,.9)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* subtle scan grid overlay */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.console::after{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content:"";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:absolute; inset:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(transparent 31px, rgba(255,255,255,.02) 32px) repeat-y,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(90deg, transparent 31px, rgba(255,255,255,.02) 32px) repeat-x;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-size:32px 32px, 32px 32px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events:none; opacity:.25;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>mix-blend-mode:overlay;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* mobile */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:560px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.line{display:block}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.dots{display:none}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hdr{font-size:.92rem}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.foot{gap:8px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="console" aria-label="VORRAY·GROUP console"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;header class="hdr"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="dot" aria-hidden="true"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;VORRAY·GROUP&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="state"&gt;[ SYSTEM NODE: &lt;span class="accent"&gt;ONLINE&lt;/span&gt; ] &lt;span class="cursor" aria-hidden="true"&gt;&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rule"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="line"&gt;&lt;span class="label"&gt;&amp;gt; Status&lt;/span&gt;&lt;span class="dots"&gt;&lt;/span&gt;&lt;span class="value"&gt;ACTIVE&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="line"&gt;&lt;span class="label"&gt;&amp;gt; Comms Port&lt;/span&gt;&lt;span class="dots"&gt;&lt;/span&gt;&lt;span class="value"&gt;VORRAY·CONNECT&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="line"&gt;&lt;span class="label"&gt;&amp;gt; Contact Endpoint&lt;/span&gt;&lt;span class="dots"&gt;&lt;/span&gt;&lt;span class="value"&gt;connect@vorray.group&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="line"&gt;&lt;span class="label"&gt;&amp;gt; Network&lt;/span&gt;&lt;span class="dots"&gt;&lt;/span&gt;&lt;span class="value"&gt;Pan-European Grid&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="line"&gt;&lt;span class="label"&gt;&amp;gt; Pending Module&lt;/span&gt;&lt;span class="dots"&gt;&lt;/span&gt;&lt;span class="value"&gt;VORRAY·BDR &lt;span class="accent"&gt;[ QUEUED ]&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rule"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="foot"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hb"&gt;&lt;span class="pulse" aria-hidden="true"&gt;&lt;/span&gt; HEARTBEAT: &lt;span class="accent"&gt;ACTIVE&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="time" id="sysTime" aria-live="polite"&gt;SYSTEM TIME (UTC): —&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag"&gt;“Balancing. Aggregation. Stability.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Live UTC time ticker</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el = document.getElementById('sysTime');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const fmt = new Intl.DateTimeFormat('en-GB', {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>year:'numeric', month:'2-digit', day:'2-digit',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>hour:'2-digit', minute:'2-digit', second:'2-digit',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>hour12:false, timeZone:'UTC'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const tick = () =&gt; { el.textContent = 'SYSTEM TIME (UTC): ' + fmt.format(new Date()); };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tick(); setInterval(tick, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
