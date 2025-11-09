@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORRAY·GROUP — System Node Console</title>
-  <meta name="description" content="VORRAY·GROUP — Infrastructure console. Balancing. Aggregation. Stability." />
+  <meta name="description" content="VORRAY·GROUP — Infrastructure console. Digital. Integrated. Stable." />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -12,7 +12,7 @@
       --panel:#161a1f;
       --text:#e6e6e6;
       --muted:#9aa6b2;
-      --accent:#00d1b2; /* green‑teal */
+      --accent:#00d1b2; /* green-teal */
       --line:#b5beca;
     }
     *{box-sizing:border-box}
@@ -61,7 +61,6 @@
       color:var(--accent);
       font-weight:600;
     }
-    /* blinking block cursor on desktops */
     @media (hover:hover){
       .hdr .badge::after{
         content:"█";
@@ -73,9 +72,7 @@
         50%{opacity:0;}
       }
     }
-    .inner{
-      padding:22px;
-    }
+    .inner{padding:22px;}
     .card{
       border:1px solid rgba(255,255,255,.1);
       border-radius:10px;
@@ -92,7 +89,6 @@
     .right{white-space:nowrap}
     .email{ color:var(--accent); text-decoration:none}
     .email:hover{ text-decoration:underline}
-    /* dotted leader between left and right */
     .leader{
       flex:1 1 auto; height:2px; margin:0 .6rem .2rem .6rem;
       background-image: radial-gradient(currentColor 1px, transparent 1.5px);
@@ -115,61 +111,17 @@
       padding:0 6px 6px;
       font-size:14px;
     }
-    /* mobile */
     @media (max-width:600px){
       .console{width:94vw}
       .row{flex-wrap:wrap; gap:.4rem}
       .leader{display:none}
       .right{width:100%;}
-      .right::before{
-        content:"";
-      }
       .hdr{padding:16px}
       .inner{padding:16px}
       .quote{margin:14px 4px 4px}
       .footer{padding:0 4px 8px}
     }
-  <style id="mobile-tweaks">
-@media (max-width: 560px){
-
-  .console{ padding: 14px; }
-  .card   { padding: 14px; border-radius: 12px; }
-
-  .row{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "left"
-      "right";
-    row-gap: 6px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,.06);
-  }
-  .row:last-child{ border-bottom: 0; }
-
-  .left{
-    grid-area: left;
-    font-size: 13px;
-    letter-spacing: .02em;
-    opacity: .8;
-    text-transform: none;
-  }
-  .right{
-    grid-area: right;
-    font-size: 18px;
-    justify-self: end;
-    text-align: right;
-    white-space: normal;
-  }
-
-  /* Заголовок/бэйдж нормальные */
-  .hdr  { font-size: 16px; }
-  .badge{ font-size: 14px; }
-
-  .quote { margin: 16px 6px 6px; font-size: 14px; line-height: 1.4; }
-  .footer{ padding: 10px 12px 16px; font-size: 12px; }
-}
-</style>
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -180,7 +132,6 @@
       </div>
       <div class="inner">
         <div class="card">
-          <!-- order: Status, Comms, Network, Pending, then Contact -->
           <div class="row">
             <div class="left">&gt; Status</div>
             <div class="leader"></div>
@@ -196,7 +147,14 @@
           <div class="row">
             <div class="left">&gt; Network</div>
             <div class="leader"></div>
-            <div class="right">Pan‑European Grid</div>
+            <div class="right">Pan-European Grid</div>
+          </div>
+
+          <!-- new row -->
+          <div class="row">
+            <div class="left">&gt; Type</div>
+            <div class="leader"></div>
+            <div class="right">Digital Infrastructure Node</div>
           </div>
 
           <div class="row">
@@ -212,7 +170,7 @@
           </div>
         </div>
 
-        <div class="quote">“Balancing. Aggregation. Stability.”</div>
+        <div class="quote">“Digital. Integrated. Stable.”</div>
       </div>
     </div>
     <div class="footer">© VORRAY OÜ · EU Grid Zone</div>
